@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from "./styles"
 import { View } from 'react-native';
-import Header from '~/components/Header';
-import Tabs from '~/components/Tabs';
-import Card from '~/components/Card';
+import Header from '../../components/Header';
+import Tabs from '../../components/Tabs';
+import Card from '../../components/Card';
 
-export default function Main() {
+const Main = () => {
   return (
     <View style={styles.container}>
       <Header/>
@@ -13,4 +13,6 @@ export default function Main() {
       <Tabs/>
     </View>
   )
-}
+};
+
+export default Main;

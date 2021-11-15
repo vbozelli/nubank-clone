@@ -4,7 +4,7 @@ import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from './styles';
 import logo from '../../assets/Nubank.png';
 
-export default function Header() {
+const Header = () =>  {
     return (
         <SafeAreaView style={styles.androidSafeArea}>
             <View style={styles.container}>
@@ -16,4 +16,6 @@ export default function Header() {
             </View>
         </SafeAreaView>
     );
-}
+};
+
+export default Header;

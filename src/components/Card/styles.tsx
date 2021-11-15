@@ -29,7 +29,7 @@ export default StyleSheet.create({
         alignItems: "center",
         flexDirection: "row",
         justifyContent: "space-between",
-        padding: 30
+        padding: 32
     },
     footer: {
         backgroundColor: "#EEE",

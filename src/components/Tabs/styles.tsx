@@ -6,8 +6,8 @@ export default StyleSheet.create({
         marginTop: 16
     },
     contentContainerStyle: {
-        paddingLeft: 8,
-        paddingRight: 8
+        paddingLeft: 16,
+        paddingRight: 16
     },
     tabItem: {
         height: 100,

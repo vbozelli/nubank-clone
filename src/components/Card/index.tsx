@@ -3,7 +3,7 @@ import { Text, TouchableOpacity, View } from "react-native";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import styles from "./styles";
 
-export default function Card() {
+const Card = () => {
     return (
         <View style={styles.container}>
             <View style={styles.header}>
@@ -23,4 +23,7 @@ export default function Card() {
             </View>
         </View>
     );
-}
+};
+
+
+export default Card;
