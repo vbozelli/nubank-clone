@@ -11,13 +11,18 @@ export default StyleSheet.create({
         marginTop: 4
     },
     container: {
-        flex: 1,
         backgroundColor: "#FFF",
         borderRadius: 4,
+        flex: 1,
+        height: '100%',
         justifyContent: "center",
+        left: 0,
         maxHeight: 400,
         marginLeft: 16,
         marginRight: 16,
+        position: "absolute",
+        right: 0,
+        top: 0,
         zIndex: 5
     },
     content: {

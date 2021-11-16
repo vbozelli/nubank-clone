@@ -41,13 +41,13 @@ const Tabs = () => {
 
     const renderTabItem = ({item, index, separators}) => {
         return (
-            <TouchableOpacity key={item.key}>
-                <View style={styles.tabItem}>
-                    <Icon name={item.icon} size={24} color="#FFF"/>    
-                    <Text style={styles.tabItemText}>{item.text}</Text>
-                </View>
+            <TouchableOpacity
+                key={item.key}
+                style={styles.tabItem}>
+                <Icon name={item.icon} size={24} color="#FFF"/>    
+                <Text style={styles.tabItemText}>{item.text}</Text>
             </TouchableOpacity>
-        )
+        );
     };
 
     return (
