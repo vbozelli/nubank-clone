@@ -1,10 +1,11 @@
 import React from 'react';
-import { TouchableOpacity, Text, View } from 'react-native'; 
+import { Animated, TouchableOpacity, Text, StyleSheet } from 'react-native'; 
 import { FlatList } from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { AnimationProps }  from '../types/AnimationProps';
 import styles from './styles';
 
-const Tabs = () => {
+const Tabs = (props: AnimationProps) => {
     type TabItem = {
         key: number,
         icon: string,
@@ -50,15 +51,26 @@ const Tabs = () => {
         );
     };
 
+    const style = StyleSheet.create({
+        container: {
+            ...styles.container,
+            opacity: props.translationY.interpolate({
+                inputRange: [0, 80],
+                outputRange: [1, 0.3],
+                extrapolate: "clamp"
+            })
+        }
+    });
+
     return (
-        <View style={styles.container}>
+        <Animated.View style={style.container}>
             <FlatList
                 horizontal={true}
                 showsHorizontalScrollIndicator={false}
                 contentContainerStyle={styles.contentContainerStyle}
                 data={data}
                 renderItem={renderTabItem}/>
-        </View>
+        </Animated.View>
     );
 }
 

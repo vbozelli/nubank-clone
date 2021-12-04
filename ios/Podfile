@@ -14,6 +14,8 @@ target 'NubankClone' do
     :hermes_enabled => true
   )
 
+  pod 'RNGestureHandler', :path => '../node_modules/react-native-gesture-handler'
+
   target 'NubankCloneTests' do
     inherit! :complete
     # Pods for testing

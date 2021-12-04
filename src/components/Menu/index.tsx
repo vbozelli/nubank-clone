@@ -1,13 +1,23 @@
 import React from 'react';
-import { Text, TouchableOpacity, View } from "react-native";
-import { ScrollView } from 'react-native-gesture-handler';
+import { Animated, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import QRCode from 'react-native-qrcode-svg';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { AnimationProps }  from '../types/AnimationProps';
 import styles from "./styles";
 
-const Menu = () => {
+const Menu = (props: AnimationProps) => {
+    const style = StyleSheet.create({
+        container: {
+            opacity: props.translationY.interpolate({
+                inputRange: [0, 80],
+                outputRange: [0, 1],
+                extrapolate: "clamp"
+            })
+        }
+    });
+
     return (
-        <ScrollView style={{opacity: 0}}>
+        <Animated.ScrollView style={style.container}>
             <View style={styles.qrCode}>
                 <QRCode
                     backgroundColor="#8B10AE"
@@ -36,7 +46,7 @@ const Menu = () => {
             <TouchableOpacity style={styles.signoutButton}>
                 <Text style={styles.signoutButtonText}>SAIR DO APP</Text>
             </TouchableOpacity>
-        </ScrollView>
+        </Animated.ScrollView>
     );
 };
 

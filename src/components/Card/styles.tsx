@@ -23,7 +23,7 @@ export default StyleSheet.create({
         position: "absolute",
         right: 0,
         top: 0,
-        zIndex: 5
+        zIndex: 1
     },
     content: {
         flex: 1,
