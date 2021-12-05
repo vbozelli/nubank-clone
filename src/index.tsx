@@ -1,13 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
-import Routes from './routes';
+import SplashScreen from 'react-native-splash-screen'
 import Main from './pages/Main';
 
-const App = () => (
-    <>
-        <StatusBar barStyle="light-content" />
-        <Main />
-    </>
-);
+const App = () => {
+    useEffect(() => {
+        SplashScreen.hide();
+    });
+
+    return (
+        <>
+            <StatusBar barStyle="light-content" />
+            <Main />
+        </>
+    );
+};
 
 export default App;
